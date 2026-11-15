@@ -269,8 +269,6 @@ h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
 .project .tags { margin-bottom: 0.75rem; }
 
 .contact { background: var(--vlak); }
-.contact .acties { margin-bottom: 1.5rem; }
-.contact-regels { color: var(--zacht); margin: 0; }
 
 .voet {
   padding: 2rem 0;
