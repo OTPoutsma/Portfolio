@@ -22,7 +22,6 @@ const projecten = [
 (function () {
   const root = document.documentElement;
   const knop = document.querySelector('.thema-knop');
-  const tekst = knop.querySelector('.thema-tekst');
   const systeemDonker = window.matchMedia('(prefers-color-scheme: dark)');
 
   function huidigThema() {
@@ -33,8 +32,10 @@ const projecten = [
 
   function werkKnopBij() {
     const donker = huidigThema() === 'dark';
-    knop.setAttribute('aria-pressed', String(donker));
-    tekst.textContent = donker ? 'Licht thema' : 'Donker thema';
+    const label = donker ? 'Wissel naar licht thema' : 'Wissel naar donker thema';
+    knop.classList.toggle('is-donker', donker);
+    knop.setAttribute('aria-label', label);
+    knop.setAttribute('title', label);
   }
 
   knop.addEventListener('click', function () {

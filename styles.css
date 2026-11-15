@@ -1,12 +1,12 @@
 /* Kleuren. Licht thema is rustiek beige, donker thema warm antraciet. */
 :root {
-  --bg: #ece3d3;
-  --vlak: #f4eee3;
-  --tekst: #2a241d;
-  --zacht: #5a4f42;
-  --accent: #7a4a26;
-  --accent-tekst: #f7f1e6;
-  --lijn: #d3c6b0;
+  --bg: #e9e4d4;
+  --vlak: #f3f0e5;
+  --tekst: #28261f;
+  --zacht: #555044;
+  --accent: #6b5532;
+  --accent-tekst: #f6f3ea;
+  --lijn: #d0c9b5;
   --kop-font: "Source Serif 4", Georgia, serif;
   --tekst-font: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
   color-scheme: light;
@@ -134,18 +134,35 @@ nav { margin-left: auto; }
 .menu a:hover { color: var(--tekst); }
 
 .thema-knop {
-  font: inherit;
-  font-size: 0.9rem;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
   color: var(--tekst);
   background: transparent;
   border: 1px solid var(--lijn);
-  border-radius: 999px;
-  padding: 0.35rem 0.85rem;
+  border-radius: 50%;
   cursor: pointer;
-  white-space: nowrap;
+  flex-shrink: 0;
 }
 .thema-knop:hover { border-color: var(--zacht); }
+
+.icoon {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* In het lichte thema toont de knop een maan (naar donker), in het donkere thema een zon (naar licht). */
+.icoon-zon { display: none; }
+.thema-knop.is-donker .icoon-zon { display: block; }
+.thema-knop.is-donker .icoon-maan { display: none; }
 
 /* Op een smal scherm verdwijnt het menu; de pagina is kort genoeg om te scrollen. */
 @media (max-width: 40rem) {
