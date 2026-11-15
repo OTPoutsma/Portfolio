@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olivier Poutsma</title>
+  <meta name="description" content="Olivier Poutsma, software-ontwikkelaar bij Aether AI. Ik onderzoek of jouw werkwijze en systemen efficiënter kunnen.">
+  <script>
+    // Zet het thema vóór het tekenen, zodat de pagina niet kort in het verkeerde thema verschijnt.
+    (function () {
+      var thema = null;
+      try { thema = localStorage.getItem('thema'); } catch (e) {}
+      if (thema === 'licht' || thema === 'donker') {
+        document.documentElement.setAttribute('data-theme', thema === 'donker' ? 'dark' : 'light');
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+
+  <header class="kop">
+    <div class="wrap kop-binnen">
+      <a class="logo" href="#top">Olivier Poutsma</a>
+      <nav aria-label="Hoofdmenu">
+        <ul class="menu">
+          <li><a href="#over">Over</a></li>
+          <li><a href="#werk">Werk</a></li>
+          <li class="menu-projecten" hidden><a href="#projecten">Projecten</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="thema-knop" type="button" aria-pressed="false">
+        <span class="thema-tekst">Donker thema</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inhoud">
+    <section class="intro" id="top">
+      <div class="wrap">
+        <p class="label">Software-ontwikkelaar bij Aether AI</p>
+        <h1>Olivier Poutsma</h1>
+        <p class="lead">Ik onderzoek of jouw werkwijze en systemen efficiënter kunnen, met AI of met andere systemen.</p>
+        <div class="acties">
+          <a class="knop knop-vol" href="mailto:olivier.poutsma@aetherai.nl">Mail mij</a>
+          <a class="knop knop-rand" href="https://github.com/OTPoutsma" rel="noopener">Bekijk mijn GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="blok" id="over" aria-labelledby="over-kop">
+      <div class="wrap">
+        <h2 id="over-kop">Over mij</h2>
+        <p>Bij Aether AI onderzoek ik voor klanten of hun werkwijze en systemen efficiënter kunnen. Soms is AI daarvoor de oplossing, soms een ander systeem.</p>
+        <p>Naast mijn werk studeer ik natuurkunde aan de Universiteit Leiden. Ik zit in mijn tweede jaar.</p>
+      </div>
+    </section>
+
+    <section class="blok" id="werk" aria-labelledby="werk-kop">
+      <div class="wrap">
+        <h2 id="werk-kop">Werk</h2>
+        <article class="regel">
+          <div class="regel-meta">Sinds 2026</div>
+          <div>
+            <h3>Software-ontwikkelaar, Aether AI</h3>
+            <p>Ik onderzoek voor klanten van Aether AI of hun werkwijze en systemen efficiënter kunnen, door middel van AI of andere systemen.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projecten: voeg ze toe in script.js (lijst "projecten"). Zolang die lijst leeg is, blijft dit deel verborgen. -->
+    <section class="blok" id="projecten" aria-labelledby="projecten-kop" hidden>
+      <div class="wrap">
+        <h2 id="projecten-kop">Projecten</h2>
+        <div class="projecten-lijst"></div>
+      </div>
+    </section>
+
+    <section class="blok" id="opleiding" aria-labelledby="opleiding-kop">
+      <div class="wrap">
+        <h2 id="opleiding-kop">Opleiding</h2>
+        <article class="regel">
+          <div class="regel-meta">Tweede jaar</div>
+          <div>
+            <h3>Natuurkunde, Universiteit Leiden</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="blok" id="vaardigheden" aria-labelledby="vaardigheden-kop">
+      <div class="wrap">
+        <h2 id="vaardigheden-kop">Talen waarin ik werk</h2>
+        <ul class="tags">
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>Python</li>
+          <li>C++</li>
+          <li>C#</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="blok contact" id="contact" aria-labelledby="contact-kop">
+      <div class="wrap">
+        <h2 id="contact-kop">Kan jouw werk efficiënter?</h2>
+        <p>Stuur me een mail. Dan kijken we samen waar tijd verloren gaat en wat daaraan te doen is.</p>
+        <div class="acties">
+          <a class="knop knop-vol" href="mailto:olivier.poutsma@aetherai.nl">Mail mij</a>
+        </div>
+        <p class="contact-regels">
+          <a href="mailto:olivier.poutsma@aetherai.nl">olivier.poutsma@aetherai.nl</a><br>
+          <a href="https://github.com/OTPoutsma" rel="noopener">github.com/OTPoutsma</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="voet">
+    <div class="wrap">
+      <p>Olivier Poutsma, Aether AI</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
