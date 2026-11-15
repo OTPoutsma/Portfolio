@@ -1,12 +1,12 @@
 /* Kleuren. Licht thema is rustiek beige, donker thema warm antraciet. */
 :root {
-  --bg: #e9e4d4;
-  --vlak: #f3f0e5;
+  --bg: #f0ece0;
+  --vlak: #f8f6ef;
   --tekst: #28261f;
   --zacht: #555044;
   --accent: #6b5532;
   --accent-tekst: #f6f3ea;
-  --lijn: #d0c9b5;
+  --lijn: #d9d3c2;
   --kop-font: "Source Serif 4", Georgia, serif;
   --tekst-font: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
   color-scheme: light;
@@ -159,10 +159,10 @@ nav { margin-left: auto; }
   stroke-linejoin: round;
 }
 
-/* In het lichte thema toont de knop een maan (naar donker), in het donkere thema een zon (naar licht). */
-.icoon-zon { display: none; }
-.thema-knop.is-donker .icoon-zon { display: block; }
-.thema-knop.is-donker .icoon-maan { display: none; }
+/* De knop toont het thema dat actief is: een zon in het lichte thema, een maan in het donkere. */
+.icoon-maan { display: none; }
+.thema-knop.is-donker .icoon-maan { display: block; }
+.thema-knop.is-donker .icoon-zon { display: none; }
 
 /* Op een smal scherm verdwijnt het menu; de pagina is kort genoeg om te scrollen. */
 @media (max-width: 40rem) {
